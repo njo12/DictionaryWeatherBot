@@ -60,10 +60,6 @@ while('bye' not in response.lower()) :
             url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=Imperial&appid=--------------------------------'
             data = requests.get(url)
             dj = json.loads(data.text)
-                #print(type(data.text))
-                #print(data.text)
-            print('\n')
-            #print(data.text)
             print('\n')
             if dj['weather'][0]['main'] == 'Clouds' :
                 f = open('CloudsArt', 'r')
